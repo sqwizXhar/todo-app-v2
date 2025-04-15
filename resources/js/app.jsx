@@ -12,4 +12,16 @@ import './bootstrap';
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-import './components/Example';
+import './components/TaskForm';
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import TaskForm from './components/TaskForm';
+import TaskList from './components/TaskList';
+
+ReactDOM.createRoot(document.getElementById('task-form')).render(
+    <>
+        <TaskForm />
+        <TaskList />
+    </>
+);

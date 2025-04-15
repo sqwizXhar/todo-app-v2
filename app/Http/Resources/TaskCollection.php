@@ -12,7 +12,7 @@ class TaskCollection extends ResourceCollection
      *
      * @var string|null
      */
-    public static $wrap = 'users';
+    public static $wrap = 'tasks';
 
     /**
      * Transform the resource collection into an array.

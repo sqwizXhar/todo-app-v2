@@ -8,6 +8,13 @@ use Illuminate\Http\Request;
 class TaskResource extends BaseResource
 {
     /**
+     * The "data" wrapper that should be applied.
+     *
+     * @var string|null
+     */
+    public static $wrap = 'task';
+
+    /**
      * Transform the resource into an array.
      *
      * @return array<string, mixed>

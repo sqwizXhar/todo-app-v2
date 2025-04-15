@@ -1,13 +1,7 @@
 <?php
 
-use App\Http\Controllers\Api\AuthController;
 use Illuminate\Support\Facades\Route;
 
-Route::post('login', [AuthController::class, 'login'])->name('user.login');
+Route::post('task',[\App\Http\Controllers\Api\TaskController::class, 'store'])->name('user.task');
 
-Route::middleware('auth:sanctum')->group(function () {
-    Route::get('logout', [AuthController::class, 'logout'])->name('user.logout');
-    Route::apiResources([
-        'tasks' => \App\Http\Controllers\Api\TaskController::class,
-    ]);
-});
+Route::get('tasks',[\App\Http\Controllers\Api\TaskController::class, 'index'])->name('user.tasks');
